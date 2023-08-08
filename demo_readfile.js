@@ -4,10 +4,11 @@ const { error } = require('console');
 
 http.createServer(function(req, res){
     try{
-        fs.readFile('demofile2.html', function(err, data){
+        fs.readFile('demofile1.html', function(err, data){
             if (err){
                 res.writeHead(500, {'Content-Type' : 'text/plain'});
                 res.write('500 Internal Server Error');
+                console.log(err);
                 res.end();
             }else{
                 res.writeHead(200, {'Content-Type' : 'text/html'});
