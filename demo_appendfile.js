@@ -3,7 +3,7 @@ var fs = require('fs');
 
 http.createServer(function(req, res){
 
-    fs.appendFile('mynewfile.txt', 'Hello Nodejs', function(err){
+    fs.appendFile('mynewfile.txt', 'Hello Nodejs Testting the Node ropes...', function(err){
         if (err){
             res.writeHead(500, {'Content-Type' : 'text/plain'});
             res.write('500 Internal Server Error');
